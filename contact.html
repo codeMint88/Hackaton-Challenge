@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="./css/contact.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <!-- NAVIGATION BAR -->
+    <nav class="nav_container container">
+      <a href="./index.html">
+        <div class="logo_container">
+          <figure class="company_logo">
+            <img src="image/getlinked.png" alt="company logo" width="170" height="32">
+            <figcaption class="sr-only"> Company Logo </figcaption>
+          </figure>
+        </div>
+      </a>
+      <button class="nav_btn">
+        <figure class="menu_icon">
+          <img src="image/menu_icon_19x14.png" alt="menu icon" width="19" height="14">
+          <figcaption class="sr-only"> menu icon </figcaption>
+        </figure>
+        <figure class="cancel_icon">
+          <img src="image/cancel_icon11x11.png" alt="cancel icon" width="11" height="11">
+          <figcaption class="sr-only"> menu icon </figcaption>
+        </figure>
+      </button>
+      <ul class="nav_list">
+        <li>
+          <a href="#" class="scroll_to_timeline">
+            <p>Timeline</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="scroll_to_intro">
+            <p>Overview</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="scroll_to_faq">
+            <p>FAQs</p>
+          </a>
+        </li>
+        <li>
+          <a href="./contact.html">
+            <p>Contact</p>
+          </a>
+        </li>
+      </ul>
+
+      <a href="/register.html"><button class="primary_btn">Register</button></a>
+
+    </nav>
+  </header>
+
+  <hr>
+  <main>
+    <!-- CONTACT PAGE -->
+    
+    <section class="contact_section">
+      <div class="bg_effect_container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    
+      <div class="star">
+        <figure class="bg_star_1">
+          <img src="image/star-gray_23x32.png" alt="background image" width="23" height="32">
+          <figcaption class="sr-only"> background image </figcaption>
+        </figure>
+        <figure class="bg_star_2">
+          <img src="image/star-pink_21x25.png" alt="background image" width="23" height="32">
+          <figcaption class="sr-only"> background image </figcaption>
+        </figure>
+        <figure class="bg_star_3">
+          <img src="image/star-purple_30x36.png" alt="background image" width="23" height="32">
+          <figcaption class="sr-only"> background image </figcaption>
+        </figure>
+        <figure class="bg_star_4">
+          <img src="image/star-white_26x32.png" alt="background image" width="23" height="32">
+          <figcaption class="sr-only"> background image </figcaption>
+        </figure>
+      </div>
+    
+      <div class="contact_sect_container container">
+        <div class="contact_sec_article animate_section">
+          <!-- <h3 class="article_title_white animated_text">Introduction to getlinked</h3> -->
+          <div class="contact_left">
+            <h3 class="article_title_purple animated_text">Get in touch</h3>
+            <div class="contact_info_1">
+              <p class="article_content animated_text"> Contact Information</p>
+            </div>
+            <div class="contact_info_2">
+              <p class="article_content animated_text"> 27, Alara Street Yaba 100012 Lagos State</p>
+            </div>
+            <div class="contact_info_3">
+              <p class="article_content animated_text"> Call Us : 07067981819</p>
+            </div>
+            <div class="contact_info_4">
+              <p class="article_content animated_text">we are open from Monday-Friday 08:00am - 05:00pm</p>
+            </div>
+            <div class="follow_us">
+              <p class="article_content animated_text">Share on</p>
+              <div class="socials_container animated_text">
+                <a href="#">
+                  <figure class="instagram_icon socials">
+                    <img src="image/instagram_20x20.png" alt="instagram icon" width="20" height="20">
+                    <figcaption class="sr-only"> instagram icon </figcaption>
+                  </figure>
+                </a>
+                <a href="#">
+                  <figure class="x_icon socials">
+                    <img src="image/X_19x17.png" alt="x icon" width="19" height="17">
+                    <figcaption class="sr-only"> x icon </figcaption>
+                  </figure>
+                </a>
+                <a href="#">
+                  <figure class="facebook_icon socials">
+                    <img src="image/facebook_11x20.png" alt="facebook icon" width="11" height="20">
+                    <figcaption class="sr-only"> facebook icon </figcaption>
+                  </figure>
+                </a>
+                <a href="#">
+                  <figure class="linkedIn_icon socials">
+                    <img src="image/linkedIn_20x18.png" alt="linkedIn icon" width="20" height="18">
+                    <figcaption class="sr-only"> linkedIn icon </figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="contact_right">
+            <h3 class="article_title_purple animated_text">Questions or need assistance?</h3>
+            <h3 class="article_title_purple animated_text">Let us know about it!</h3>
+
+            <form id="contactForm" method="POST" action="https://backend.getlinked.ai/hackathon/contact-form">
+              <div class="form_row">
+                <input type="text" id="form_name" name="first_name" class="form_input" placeholder="First Name" required>
+              </div>
+              <div class="form_row">
+                <input type="email" id="form_email" name="email" class="form_input" placeholder="Mail" required>
+              </div>
+              <div class="form_row">
+                <textarea class="form_input_message" name="message" id="form_message" placeholder="Message" rows="5"></textarea>
+              </div>
+              <button type="submit" class="primary_btn">Submit</button>
+            </form>
+
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <hr>
+  </main>
+</body>
+
+</html>

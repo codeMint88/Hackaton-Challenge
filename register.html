@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="./css/register.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <!-- NAVIGATION BAR -->
+    <nav class="nav_container container">
+      <a href="./index.html">
+        <div class="logo_container">
+          <figure class="company_logo">
+            <img src="image/getlinked.png" alt="company logo" width="170" height="32">
+            <figcaption class="sr-only"> Company Logo </figcaption>
+          </figure>
+        </div>
+      </a>
+
+      <button class="nav_btn">
+        <figure class="menu_icon">
+          <img src="image/menu_icon_19x14.png" alt="menu icon" width="19" height="14">
+          <figcaption class="sr-only"> menu icon </figcaption>
+        </figure>
+        <figure class="cancel_icon">
+          <img src="image/cancel_icon11x11.png" alt="cancel icon" width="11" height="11">
+          <figcaption class="sr-only"> menu icon </figcaption>
+        </figure>
+      </button>
+      <ul class="nav_list">
+        <li>
+          <a href="#" class="scroll_to_timeline">
+            <p>Timeline</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="scroll_to_intro">
+            <p>Overview</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="scroll_to_faq">
+            <p>FAQs</p>
+          </a>
+        </li>
+        <li>
+          <a href="./contact.html">
+            <p>Contact</p>
+          </a>
+        </li>
+      </ul>
+
+      <a href="/register.html"><button class="primary_btn">Register</button></a>
+
+    </nav>
+
+  </header>
+
+  <hr>
+  <main>
+    <!-- CONTACT PAGE -->
+    
+    <section class="register_section">
+      <div class="bg_effect_container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    
+      <div class="star">
+        <figure class="bg_star_1">
+          <img src="image/star-gray_23x32.png" alt="background image" width="23" height="32">
+          <figcaption class="sr-only"> background image </figcaption>
+        </figure>
+        <figure class="bg_star_2">
+          <img src="image/star-pink_21x25.png" alt="background image" width="23" height="32">
+          <figcaption class="sr-only"> background image </figcaption>
+        </figure>
+        <figure class="bg_star_3">
+          <img src="image/star-purple_30x36.png" alt="background image" width="23" height="32">
+          <figcaption class="sr-only"> background image </figcaption>
+        </figure>
+        <figure class="bg_star_4">
+          <img src="image/star-white_26x32.png" alt="background image" width="23" height="32">
+          <figcaption class="sr-only"> background image </figcaption>
+        </figure>
+      </div>
+    
+      <div class="register_sect_container container">
+        <div class="reg_sec_article animate_section">
+          <!-- <h3 class="article_title_white animated_text">Introduction to getlinked</h3> -->
+          <div class="reg_left">
+            <figure class="reg_img">
+              <img src="image/3d-graphic-designer-showing-thumbs-up_717x717.png" alt="register feature image"
+                class="reg_img" width="717" height="717" />
+              <figcaption class="sr-only"> register feature image </figcaption>
+            </figure>
+          </div>
+          <div class="reg_right">
+            
+
+            <form id="registrationForm" method="POST" action="https://backend.getlinked.ai/hackathon/registration">
+              <div class="form_heading">
+                <h3 class="article_title_purple animated_text">Register</h3>
+                
+                <p class="article_content animated_text">Let us know about it!</p>
+                
+                <p class="article_content capitalize animated_text">CREATE YOUR ACCOUNT</p>
+              </div>
+              
+              <div class="form_container">
+                <div class="form_column">
+                  <div class="form_row">
+                    <label class="form_label article_content" for="teamName">Team's Name:</label>
+                    <input class="form_input article_content" type="text" id="teamName" name="teamName" placeholder="Enter the name of your group">
+                  </div>
+                  <div class="form_row">
+                    <label class="form_label article_content" for="email">Email:</label>
+                    <input class="form_input article_content" type="email" id="email" name="email" placeholder="Enter your email address">
+                  </div>
+                  <div class="form_row">
+                    <label class="form_label article_content" for="category">Category</label>
+                    <select class="form_input article_content" id="category" name="category">
+                      <option value="1">Category 1</option> 
+                      <option value="2">Category 2</option>
+                      <option value="3">Category 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form_column">
+                  <div class="form_row">
+                    <label class="form_label article_content" for="phone">Phone:</label>
+                    <input class="form_input article_content" type="text" id="phone" name="phone" placeholder="Enter your phone number">
+                  </div>
+                  <div class="form_row">
+                    <label class="form_label article_content" for="projectTopic">Project Topic:</label>
+                    <input class="form_input article_content" type="text" id="projectTopic" name="projectTopic" placeholder="What is your group project topic">
+                  </div>
+                  <div class="form_row">
+                    <label class="form_label article_content" for="groupSize">Group size</label>
+                    <select class="form_input article_content" id="groupSize" name="groupSize">
+                      <option value="small">Select</option>
+                      <option value="medium">Medium</option>
+                      <option value="large">Large</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form_row">
+                <p class="article_content form_p_pink">Please review your registration details before submitting</p>
+                <input class="checkbox" type="checkbox" id="terms" name="terms">
+                <label for="terms"> I agree to the terms and conditions</label>
+              </div>
+              <button class="form_submit primary_btn article_content" type="submit">Submit</button>
+            </form>
+
+          </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <div class="success_section hidden">
+      <div class="success_image">
+        <figure class="success_img_1">
+          <img src="./image/successfully-done_288x288.png" alt="success feature image" class="reg_img"
+            width="288" height="288" />
+          <figcaption class="sr-only"> success feature image </figcaption>
+        </figure>
+
+        <figure class="success_img_2">
+          <img src="./image/successful-man_305x305.png" alt="success feature image" class="reg_img"
+            width="305" height="305" />
+          <figcaption class="sr-only"> success feature image </figcaption>
+        </figure>
+      </div>
+      
+      <div class="success_message">
+        <h3> <span class="no-wrap">Congratulations</span> <span class="rest_of_text">You have successfully Registered!</span></h3>
+        <p>Yes, it was easy and you did it! check your mail box for next step &#128521;</p>
+      </div>
+      <a href="/register.html"><button class="primary_btn">Back</button></a>
+    </div>
+    <div class="overlay hidden"></div>
+  </main>
+
+  <hr>
+
+
+</body>
+
+</html>
