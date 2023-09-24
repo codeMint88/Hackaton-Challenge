@@ -23,6 +23,9 @@ const imgTargets = document.querySelectorAll("img[data-src]");
 const successPage = document.querySelector(".success_section");
 const overlay = document.querySelector(".overlay");
 
+// Select all btn element to animate on hover
+const allBtn = navContainer.querySelectorAll("button");
+
 const closeMenu = () => {
   navList.style.display = "none";
   primaryBtn.style.display = "none";
@@ -63,6 +66,8 @@ scrollIntoViews(scrollToIntro, introSection);
 scrollIntoViews(scrollToTimeline, timelineSection);
 
 // SECTION ANIMATION
+// SECTION ANIMATION
+// SECTION ANIMATION
 
 const animateSection = (entries, observer) => {
   const [entry] = entries;
@@ -88,6 +93,8 @@ sectionsToAnimate.forEach((section) => {
 });
 
 // Lazy loading images
+// Lazy loading images
+// Lazy loading images
 
 const loadImg = function (entries, observer) {
   const [entry] = entries;
@@ -112,6 +119,16 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach((img) => imgObserver.observe(img));
 
+allBtn.forEach((btn) => {
+  btn.addEventListener("mouseover", () => {
+    // Get a reference to the element
+    const element = btn.parentNode;
+    console.log(element);
+  });
+});
+
+// Submit Contact Form
+// Submit Contact Form
 // Submit Contact Form
 document.getElementById("contactForm").addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent the default form submission
@@ -145,6 +162,8 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     });
 });
 
+// Submit Registration Form
+// Submit Registration Form
 // Submit Registration Form
 document
   .getElementById("registrationForm")

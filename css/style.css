@@ -27,6 +27,9 @@
 
   --timeline-circle-bg: linear-gradient(to left, #903AFF 0%, #D434FE 100%);
 
+  --button-bg-gradient: linear-gradient(to bottom, #9A39FF 0%, #FF29B9 100%);
+  
+
 	--transition: all 400ms ease-in-out;
 
   /* Fonts */
@@ -119,6 +122,17 @@ p {
   font-size: clamp(0.7em, 3vw, 1em);
   /* line-height: 1.7; */
 }
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+a:active,
+a:focus {
+  outline: none;
+}
+
 
 .animate_section {
   transition: transform 1s, opacity 1s;
@@ -400,15 +414,17 @@ body {
   transform: scale(.98);
 }
 
-.primary_btn {
-  /* border: var(--border); */
-  background: var(--gradient-primary);
-  padding: 0.6rem 2.3rem;
-  color: white;
-  border: none;
-  cursor: pointer;
+/* .btn_container {
+  width: fit-content;
+  padding: 0.2rem;
   border-radius: 5px;
-}
+  background-image: var(--button-bg-gradient);
+} */
+
+/* 
+.primary_btn:hover {
+  background-image: var(--primary-dark);
+} */
 
 @media screen and (width < 768px) {
   .primary_btn {
@@ -591,13 +607,23 @@ body {
   height: 85%;
   top: 0;
   position: absolute;
+  animation: rotateAnticlockwise 5s linear infinite;
+}
+
+@keyframes rotateAnticlockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+    /* Rotate anticlockwise (counterclockwise) */
+  }
 }
 
 .hero_right_img1 {
   filter: grayscale(100%);
 }
-
-
 
 .hero_italic {
   /* margin-bottom: 2rem; */
@@ -2022,50 +2048,14 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.element {
-  position:absolute;
-  width: 1000px;
-  height: 1000px;
-  background-image: url("/image/Purple-Lens-Flare_892x948.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 0;
-}
-
-.element1 {
-  top: 500%;
-  right: -10px;
-  transform: rotate(180deg);
-}
-
-@media only screen and (width <=768px) {
-  .element {
-    width: 400px;
-    height: 400px;
-    top: 0;
-    opacity: 50%;
-  }
-
-  .element1 {
-    top: 1000px;
-    right: -10px;
+@media only screen and (width < 600px) { 
+  footer .complany_logo {
+    width: 120px;
+    height: 28px;
+    position: absolute;
+    top: -2rem;
+    left: 3.2em;
   }
 }
+
 
