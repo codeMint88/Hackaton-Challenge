@@ -190,6 +190,7 @@ span.rest_of_text {
 
 @media screen and (width < 600px) {
   .success_section {
+    margin-top: 6rem;
     width: 90%;
   }
 }
