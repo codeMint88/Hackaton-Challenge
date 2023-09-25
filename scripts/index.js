@@ -24,7 +24,7 @@ const successPage = document.querySelector(".success_section");
 const overlay = document.querySelector(".overlay");
 
 // Select all btn element to animate on hover
-const allBtn = navContainer.querySelectorAll("button");
+const allBtn = document.querySelectorAll(".primary_btn");
 
 const closeMenu = () => {
   navList.style.display = "none";
@@ -119,83 +119,60 @@ const imgObserver = new IntersectionObserver(loadImg, {
 
 imgTargets.forEach((img) => imgObserver.observe(img));
 
-allBtn.forEach((btn) => {
-  btn.addEventListener("mouseover", () => {
-    // Get a reference to the element
-    const element = btn.parentNode;
-    console.log(element);
-  });
+// Close navbar for small screens when a link is clicked
+// Close navbar for small screens when a link is clicked
+// Close navbar for small screens when a link is clicked
+
+navContainer.addEventListener("click", (e) => {
+  const clicked = e.target.closest("a");
+  // console.log(clicked);
+
+  // Guard clause
+  if (!clicked) return;
+  window.innerWidth < 768 && closeMenu();
 });
 
-// Submit Contact Form
-// Submit Contact Form
-// Submit Contact Form
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission
+// IMPLEMENTING TIMER
+// IMPLEMENTING TIMER
+// IMPLEMENTING TIMER
+const targetDate = new Date("2023-09-31T23:59:59").getTime();
 
-  const form = e.target;
-  const formData = new FormData(form);
+// Update the countdown timer every second
+const timerInterval = setInterval(updateCountdown, 1000);
 
-  fetch("https://backend.getlinked.ai/hackathon/contact-form", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(Object.fromEntries(formData)), // Convert form data to JSON
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json(); // Parse the response JSON
-    })
-    .then((data) => {
-      // Handle the response data here
-      console.log(data);
+function updateCountdown() {
+  const currentDate = new Date().getTime();
+  const timeLeft = targetDate - currentDate;
 
-      // Clear the form inputs on success
-      form.reset();
-    })
-    .catch((error) => {
-      // Handle any errors here
-      console.error("Error:", error);
-    });
-});
+  if (timeLeft <= 0) {
+    // If the target date has passed, display 00:00:00 and stop the timer
+    document.getElementById("hours").textContent = "00";
+    document.getElementById("minutes").textContent = "00";
+    document.getElementById("seconds").textContent = "00";
+    clearInterval(timerInterval);
+  } else {
+    // Calculate hours, minutes, and seconds
+    const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-// Submit Registration Form
-// Submit Registration Form
-// Submit Registration Form
-document
-  .getElementById("registrationForm")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
+    // Update the countdown timer elements
+    document.getElementById("hours").innerHTML = `${formatTime(
+      hours
+    )} <span>H</span>`;
+    document.getElementById("minutes").innerHTML = `${formatTime(
+      minutes
+    )} <span>M</span>`;
+    document.getElementById("seconds").innerHTML = `${formatTime(
+      seconds
+    )} <span>S</span>`;
+  }
+}
 
-    const form = e.target;
-    const formData = new FormData(form);
+function formatTime(time) {
+  // Add leading zeros to single-digit numbers (e.g., 1 -> 01)
+  return time < 10 ? `0${time}` : `${time}`;
+}
 
-    formData.set("category", parseInt(formData.get("category")));
-
-    fetch("https://backend.getlinked.ai/hackathon/registration", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(Object.fromEntries(formData)),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-
-        successPage.classList.remove("hidden");
-        overlay.classList.remove("hidden");
-        form.reset();
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  });
+// Initial update to avoid delay in displaying the timer
+updateCountdown();

@@ -131,12 +131,29 @@
   border: 1px solid var(--primary-pink);
 }
 
+.success_img {
+  animation: bounce 2s infinite alternate;
+}
+
 .success_img_1 {
-  transform: translateX(25%);
+  animation-direction: normal;
 }
 
 .success_img_2 {
-  transform: translateX(-25%);
+  animation-direction: reverse;
+}
+
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateX(25%);
+  }
+
+  50% {
+    transform: translateX(-25%);  
+  }
 }
 
 .success_message h3 {

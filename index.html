@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hackaton</title>
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./script.js" defer ></script>
+  <script src="./scripts/index.js" defer ></script>
 </head>
 <body>
   <header>
@@ -32,17 +32,17 @@
       </button>
       <ul class="nav_list">
         <li>
-          <a href="#" class="scroll_to_timeline">
+          <a class="scroll_to_timeline">
             <p>Timeline</p>
           </a>
         </li>
         <li>
-          <a href="#" class="scroll_to_intro">
+          <a class="scroll_to_intro">
             <p>Overview</p>
           </a>
         </li>
         <li>
-          <a href="#" class="scroll_to_faq">
+          <a class="scroll_to_faq">
             <p>FAQs</p>
           </a>
         </li>
@@ -53,7 +53,8 @@
         </li>
       </ul>
       
-      <a href="/register.html"><button class="primary_btn">Register</button></a>
+      <a href="/register.html"> <div class="hide_btn_bg">  <button class="primary_btn reg_btn">Register</button> </div>
+      </a>
       
     </nav>
     
@@ -132,21 +133,22 @@
                   </p>
                 </div>
                 <div>
-                  <a href="./register.html"> <div class="btn_container">
-                    <button class="primary_btn">Register</button>
-                  </div></a>
+                  <a href="./register.html"> 
+                    <button class="primary_btn activate_btn">Register</button>
+                  </a>
                 </div>
                 <div class="hero_timer">
                   <div>
-                    <h6 class="hero_timer_h6">00<span>H</span></h6>
+                    <h6 class="hero_timer_h6" id="hours">00<span>H</span></h6>
                   </div>
                   <div>
-                    <h6 class="hero_timer_h6">00<span>M</span></h6>
+                    <h6 class="hero_timer_h6" id="minutes">00<span>M</span></h6>
                   </div>
                   <div>
-                    <h6 class="hero_timer_h6">00<span>S</span></h6>
+                    <h6 class="hero_timer_h6" id="seconds">00<span>S</span></h6>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -740,7 +742,7 @@
 
     <hr>
     <!-- Privacy and Policy terms -->
-    <section class="privacy_section">
+    <section class="privacy_section" id="privacy">
       <div class="bg_effect_container">
         <div></div>
         <div></div>
@@ -841,10 +843,12 @@
       <div class="footer_content container">
         <div class="footer_item1">
           <div class="logo_container">
-            <figure class="complany_logo animated_text">
+            <a href="./index.html"> 
+              <figure class="complany_logo animated_text">
               <img src="image/getlinked.png" alt="company logo" width="170" height="32">
               <figcaption class="sr-only"> Company Logo </figcaption>
-            </figure>
+              </figure>
+            </a>
           </div>
           <p class="footer_item1_p animated_text">Getlinked Tech Hackathon is a technology innovation program
           established by a group of organizations with the aim of showcasing
@@ -857,11 +861,11 @@
         </div>
         <div class="footer_item2">
           <p class="article_content animated_text">Useful Links</p>
-          <a class="animated_text" href="#">Privacy Policy</a>
-          <a class="animated_text" href="#">Overview</a>
-          <a class="animated_text" href="#">Timeline</a>
-          <a class="animated_text" href="#">FAQs</a>
-          <a class="animated_text" href="#">Register</a>
+          <a class="animated_text" href="#privacy">Privacy Policy</a>
+          <a class="animated_text" href="#overview">Overview</a>
+          <a class="animated_text" href="#timeline">Timeline</a>
+          <a class="animated_text" href="#faq">FAQs</a>
+          <a class="animated_text" href="./register.html">Register</a>
           <div class="follow_us">
             <p class="article_content animated_text">Follow us</p>
             <div class="socials_container animated_text">

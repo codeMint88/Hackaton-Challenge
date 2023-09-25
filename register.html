@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
   <link rel="stylesheet" href="./css/register.css">
-  <script src="./script.js" defer></script>
+  <script src="./scripts/registration.js" defer></script>
+  <script src="./scripts/index.js" defer></script>
 </head>
 
 <body>
@@ -34,17 +35,17 @@
       </button>
       <ul class="nav_list">
         <li>
-          <a href="#" class="scroll_to_timeline">
+          <a href="./index.html" class="scroll_to_timeline">
             <p>Timeline</p>
           </a>
         </li>
         <li>
-          <a href="#" class="scroll_to_intro">
+          <a href="./index.html" class="scroll_to_intro">
             <p>Overview</p>
           </a>
         </li>
         <li>
-          <a href="#" class="scroll_to_faq">
+          <a href="./index.html" class="scroll_to_faq">
             <p>FAQs</p>
           </a>
         </li>
@@ -120,7 +121,7 @@
                 <div class="form_column">
                   <div class="form_row">
                     <label class="form_label article_content" for="teamName">Team's Name:</label>
-                    <input class="form_input article_content" type="text" id="teamName" name="teamName" placeholder="Enter the name of your group">
+                    <input class="form_input article_content" type="text" id="teamName" name="team_name" placeholder="Enter the name of your group">
                   </div>
                   <div class="form_row">
                     <label class="form_label article_content" for="email">Email:</label>
@@ -138,15 +139,15 @@
                 <div class="form_column">
                   <div class="form_row">
                     <label class="form_label article_content" for="phone">Phone:</label>
-                    <input class="form_input article_content" type="text" id="phone" name="phone" placeholder="Enter your phone number">
+                    <input class="form_input article_content" type="text" id="phone" name="phone_number" placeholder="Enter your phone number">
                   </div>
                   <div class="form_row">
                     <label class="form_label article_content" for="projectTopic">Project Topic:</label>
-                    <input class="form_input article_content" type="text" id="projectTopic" name="projectTopic" placeholder="What is your group project topic">
+                    <input class="form_input article_content" type="text" id="projectTopic" name="project_topic" placeholder="What is your group project topic">
                   </div>
                   <div class="form_row">
                     <label class="form_label article_content" for="groupSize">Group size</label>
-                    <select class="form_input article_content" id="groupSize" name="groupSize">
+                    <select class="form_input article_content" id="group_size" name="groupSize">
                       <option value="small">Select</option>
                       <option value="medium">Medium</option>
                       <option value="large">Large</option>
@@ -156,7 +157,7 @@
               </div>
               <div class="form_row">
                 <p class="article_content form_p_pink">Please review your registration details before submitting</p>
-                <input class="checkbox" type="checkbox" id="terms" name="terms">
+                <input class="checkbox" type="checkbox" id="terms" name="privacy_poclicy_accepted">
                 <label for="terms"> I agree to the terms and conditions</label>
               </div>
               <button class="form_submit primary_btn article_content" type="submit">Submit</button>
@@ -170,13 +171,13 @@
 
     <div class="success_section hidden">
       <div class="success_image">
-        <figure class="success_img_1">
+        <figure class="success_img_1 success_img">
           <img src="./image/successfully-done_288x288.png" alt="success feature image" class="reg_img"
             width="288" height="288" />
           <figcaption class="sr-only"> success feature image </figcaption>
         </figure>
 
-        <figure class="success_img_2">
+        <figure class="success_img_2 success_img">
           <img src="./image/successful-man_305x305.png" alt="success feature image" class="reg_img"
             width="305" height="305" />
           <figcaption class="sr-only"> success feature image </figcaption>
@@ -190,6 +191,7 @@
       <a href="/register.html"><button class="primary_btn">Back</button></a>
     </div>
     <div class="overlay hidden"></div>
+    
   </main>
 
   <hr>

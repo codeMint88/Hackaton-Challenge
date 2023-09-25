@@ -370,6 +370,11 @@ body {
   display: none;
 }
 
+.nav_btn:active,
+.nav_btn:focus {
+  outline: none;
+}
+
 .nav_list {
   display: flex;
   margin-left: 5em;
@@ -414,12 +419,13 @@ body {
   transform: scale(.98);
 }
 
-/* .btn_container {
+.btn_hovered {
   width: fit-content;
-  padding: 0.2rem;
+  padding: 0.15rem;
   border-radius: 5px;
   background-image: var(--button-bg-gradient);
-} */
+}
+
 
 /* 
 .primary_btn:hover {
@@ -474,7 +480,7 @@ body {
     position: fixed;
     top: 0;
     z-index: 10;
-    background-color: rebeccapurple;
+    background-color: #663399;
     width: 100vw;
   }
 
